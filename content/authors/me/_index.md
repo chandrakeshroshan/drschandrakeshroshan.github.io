@@ -1,174 +1,228 @@
 ---
 # Display name
-title: Academic Demo
+title: Dr. S Chand Rakesh Roshan
 
 # Full name (for SEO)
-first_name: Academic
-last_name: Demo
+first_name: S Chand Rakesh
+last_name: Roshan
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Professional Title
+role: Assistant Professor in Physics
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
-  - name: Company Name
-    url: https://example.com/
+  - name: Rajiv Gandhi University of Knowledge Technologies, Basar
+    url: https://rgukt.ac.in/
 
 # Social network links
 profiles:
   - icon: at-symbol
-    url: 'mailto:no_reply@example.com'
+    url: 'mailto:roshanscrd@gmail.com'
     label: E-mail Me
-  - icon: brands/github
-    url: https://github.com/
   - icon: brands/linkedin
-    url: https://www.linkedin.com/
+    url: https://www.linkedin.com/in/chandrakeshroshan/
+  - icon: brands/orcid
+    url: https://orcid.org/0000-0002-6822-7818
 
 # Interests to show in About widget
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Computational Physics
+  - Lattice Thermal Conductivity
+  - Materials Science
+  - DFT Calculations
+  - Educational Technology
 
 # Education to show in About widget
 education:
-  - area: Degree
-    institution: University of Somewhere
-    location: City, County
+  - area: Ph.D. in Physics
+    institution: National Institute of Technology Warangal
+    location: Warangal, India
     date_start: ''
-    date_end: ''
+    date_end: '2024-02-01'
     summary: ''
+  - area: M.Tech in Computational Techniques
+    institution: University of Hyderabad
+    location: Hyderabad, India
+    date_start: ''
+    date_end: '2010-08-01'
+    summary: 'GPA: 8.88/10.0'
+  - area: M.Sc in Physics
+    institution: Sri Satya Sai Institute of Higher Learning
+    location: Prasanthi Nilayam, India
+    date_start: ''
+    date_end: '2008-07-01'
+    summary: 'GPA: 4.80/5.0'
+  - area: B.Sc (Hons.) in Physics
+    institution: Sri Satya Sai Institute of Higher Learning
+    location: Prasanthi Nilayam, India
+    date_start: ''
+    date_end: '2006-07-01'
+    summary: 'GPA: 4.57/5.0'
 
 # Skills
 skills:
-  - name: Technical
+  - name: Research & Computational
     items:
-      - name: Python
-        description: ''
-        percent: 80
+      - name: DFT Calculations
+        description: 'VASP, Quantum ESPRESSO'
+        percent: 95
         icon: code-bracket
-      - name: Data Science
-        description: ''
-        percent: 100
+      - name: Materials Modeling
+        description: 'Lattice Thermal Conductivity, Phase Transitions'
+        percent: 95
         icon: chart-bar
-      - name: SQL
-        description: ''
-        percent: 40
+      - name: Python & Scientific Computing
+        description: 'Data Analysis, Visualization'
+        percent: 90
         icon: circle-stack
-  - name: Hobbies
+  - name: Teaching & Technology
+    color: '#0066cc'
+    color_border: '#0052a3'
+    items:
+      - name: Educational Technology
+        description: 'Microsoft Innovative Educator Trainer, Adobe Creative Educator'
+        percent: 95
+        icon: academic-cap
+      - name: Online Teaching
+        description: 'NPTEL, MOOCs, Digital Tools'
+        percent: 90
+        icon: presentation-chart-line
+      - name: Curriculum Development
+        description: 'Course Design, Lab Development'
+        percent: 85
+        icon: book-open
+  - name: Interests
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Badminton
         description: ''
-        percent: 60
-        icon: person-simple-walk
-      - name: Cats
+        percent: 75
+        icon: circle-stack
+      - name: Cricket
         description: ''
-        percent: 100
-        icon: cat
-      - name: Photography
+        percent: 75
+        icon: circle-stack
+      - name: Music
         description: ''
-        percent: 80
-        icon: camera
+        percent: 70
+        icon: musical-note
 
 # Languages
 languages:
   - name: English
     percent: 100
-  - name: Spanish
-    percent: 75
+  - name: Hindi
+    percent: 100
+  - name: Telugu
+    percent: 100
 
 # Work experience
 work:
-  - position: Job Title
-    company_name: Company Name
-    company_url: ''
+  - position: Assistant Professor in Physics
+    company_name: Rajiv Gandhi University of Knowledge Technologies, Basar
+    company_url: 'https://rgukt.ac.in/'
     company_logo: ''
-    location: City, County
-    date_start: '2018-01-01'
+    location: Basar, Telangana, India
+    date_start: '2010-10-01'
     date_end: ''
     summary: |
-      Responsibilities include:
-      - Ac dolor ac adipiscing amet bibendum nullam, lacus molestie ut libero nec, diam, pharetra sodales, feugiat ullamcorper tempor vitae
-      - Mauris pretium aliquet, lectus tincidunt. Porttitor mollis imperdiet libero senectus pulvinar
-      - Etiam molestie mauris ligula laoreet, vehicula eleifend. Repellat orci erat et, sem cum, ultricies sollicitudin amet eleifend dolor nullam erat
-  - position: Job Title
-    company_name: Company Name
-    company_url: ''
-    company_logo: ''
-    location: City, County
-    date_start: '2009-01-01'
-    date_end: '2017-12-31'
-    summary: |
-      Responsibilities include:
-      - Duis montes, tellus lobortis lacus amet arcu et
-      - In vitae vel, wisi at, praesent bibendum libero faucibus porta, quisque praesent ipsum tempor
-      - Curabitur auctor, erat mollis sed, turpis vivamus
-  - position: Job Title
-    company_name: Company Name
-    company_url: ''
-    company_logo: ''
-    location: City, County
-    date_start: '2006-01-01'
-    date_end: '2008-12-31'
-    summary: |
-      Responsibilities include:
-      - Aliquam ullamcorper dignissim molestie, mollis
-      - Tortor vitae tortor eros wisi facilisis
-      - Consectetuer arcu ipsum ornare pellentesque vehicula
-  - position: Job Title
-    company_name: Company Name
-    company_url: ''
-    company_logo: ''
-    location: City, County
-    date_start: '2003-01-01'
-    date_end: '2005-12-31'
-    summary: |
-      Responsibilities include:
-      - Justo fermentum id. Malesuada eleifend, tortor molestie, a a vel et
-      - Mauris at suspendisse, neque aliquam faucibus adipiscing, vivamus in
+      Key Roles and Responsibilities:
+      - SWAYAM-NPTEL Coordinator (July 2017 - Present): Coordinated SWAYAM NPTEL activities including credit transfer and certifications
+      - NITTTR Remote Centre Coordinator (July 2022 - Present): Initiated and coordinated 05 AICTE STTP's and 1 Refresher Program
+      - HEAD, Department of Physics (Dec 2011 - July 2022): Led the Physics department
+      - HEAD, University Training and Placements (July 2017 - July 2022): Led placement activities and skill enhancement programs
+      - Established Computational Physics Research Lab (2018 - Present)
+      - Published 10+ research papers in high-impact journals (ACS, Elsevier)
+      - Authored 4 books on Physics and Computational Simulations
+      - Resource person for numerous national and international workshops on Physics and ICT in Education
 
 # Awards
 awards:
-  - title: Neural Networks and Deep Learning
-    url: https://www.coursera.org/learn/neural-networks-deep-learning
-    date: '2023-11-25'
-    awarder: Coursera
-    icon: coursera
+  - title: Best Paper Award
+    url: https://icset.org/
+    date: '2022-05-27'
+    awarder: 3rd International Conference on Science Engineering and Technology (ICSET 2022)
+    icon: trophy
     summary: |
-      I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network's architecture; and apply deep learning to your own applications.
-  - title: Blockchain Fundamentals
-    url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
-    date: '2023-07-01'
-    awarder: edX
-    icon: edx
+      Received Best Paper Award at ICSET 2022, SVCT, Chennai, Tamil Nadu for outstanding research contribution in materials science.
+  - title: Microsoft Innovative Educator Trainer
+    url: https://education.microsoft.com/
+    date: '2022-01-01'
+    awarder: Microsoft
+    icon: microsoft
     summary: |
-      Learned:
-      - Synthesize your own blockchain solutions
-      - Gain an in-depth understanding of the specific mechanics of Bitcoin
-      - Understand Bitcoin's real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin's Proof-of-Work consensus algorithm
-  - title: 'Object-Oriented Programming in R'
-    url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
-    certificate_url: https://www.datacamp.com
-    date: '2023-01-21'
-    awarder: datacamp
-    icon: datacamp
+      Certified Microsoft Innovative Educator Trainer with expertise in integrating technology into education and training educators on digital tools.
+  - title: Prezi Certified Educator Trainer
+    url: https://prezi.com/
+    date: '2021-01-01'
+    awarder: Prezi
+    icon: presentation
     summary: |
-      Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+      Certified to train educators on creating engaging visual presentations using Prezi platform.
+  - title: Adobe Creative Educator
+    url: https://edex.adobe.com/
+    date: '2021-01-01'
+    awarder: Adobe
+    icon: adobe
+    summary: |
+      Certified Adobe Creative Educator demonstrating proficiency in using Adobe Creative Cloud tools for educational purposes.
+  - title: GATE AIR 244
+    url: https://gate.iitb.ac.in/
+    date: '2008-01-01'
+    awarder: IIT Bombay
+    icon: academic-cap
+    summary: |
+      Secured All India Rank 244 in Graduate Aptitude Test in Engineering (GATE) Physics.
+  - title: JEST 97.7 Percentile
+    url: https://www.jest.org.in/
+    date: '2008-01-01'
+    awarder: Joint Entrance Screening Test
+    icon: academic-cap
+    summary: |
+      Achieved 97.7 percentile in Joint Entrance Screening Test (JEST) for Physics.
 ---
 
 ## About Me
 
-Lorem ipsum dolor amet, ligula suspendisse nulla pretium, rhoncus tempor fermentum, enim integer vestibulum volutpat. Nisl rhoncus turpis est, vel elit, congue enim nunc ultricies sit, magna tincidunt. Maecenas aliquam maecenas ligula nostra, accumsan taciti. Sociis mauris.
+Dr. S Chand Rakesh Roshan is an Assistant Professor in Physics at Rajiv Gandhi University of Knowledge Technologies (RGUKT), Basar, where he has been serving since October 2010. He earned his Ph.D. from the National Institute of Technology Warangal in 2024, with research focused on computational physics and materials science.
 
-## Skills
+Dr. Roshan's research expertise lies in lattice thermal conductivity, DFT calculations, and materials modeling. He has published over 10 research papers in prestigious journals including ACS Applied Materials & Interfaces, Inorganic Chemistry, and ACS Applied Energy Materials. His work on highly anisotropic materials and ultralow thermal conductivity has gained significant recognition in the materials science community.
 
-Varius natoque turpis elementum. Duis montes, tellus lobortis lacus amet arcu et. In vitae vel, wisi, praesent bibendum libero faucibus porta egestas, quisque praesent ipsum fermentum tempor.
+Beyond research, Dr. Roshan is passionate about educational technology and has served as the SWAYAM-NPTEL Coordinator and HEAD of University Training and Placements. He is a certified Microsoft Innovative Educator Trainer, Adobe Creative Educator, and Prezi Certified Educator Trainer. He has authored four books on physics and computational simulations and is a prolific speaker at national and international conferences.
 
-## References
+## Research Interests
 
-Curabitur auctor, erat mollis sed, turpis vivamus dictumst congue magnis. Aliquam amet ullamcorper dignissim molestie, mollis. Tortor vitae tortor eros wisi facilisis. Etiam sit amet est.
+- **Computational Materials Science**: First-principles calculations using VASP and Quantum ESPRESSO
+- **Thermal Transport**: Lattice thermal conductivity in layered materials and compounds
+- **High-Pressure Physics**: Structural phase transitions under extreme conditions
+- **Educational Technology**: Integration of ICT tools in physics education
+- **Materials Design**: Low thermal conductivity materials for thermoelectric applications
+
+## Publications
+
+Dr. Roshan has published 10+ peer-reviewed journal articles in high-impact journals with focus on:
+- Lattice thermal conductivity in layered PbClF-type materials
+- Effect of atomic mass contrast on thermal transport
+- Pressure-induced phase transitions in various compounds
+- Anharmonicity and Raman spectra under high pressure
+
+## Books Published
+
+1. **Computational Simulations - A Primer** (ISBN: 978-9334283235, April 2025)
+2. **Physics in Daily Life** (ISBN: 979-8319103819, April 2025)
+3. **Physics Labs Insights (College Level)** (ISBN: 978-1980833321, April 2018)
+4. **A Montecarlo Study On Azimuthal Bistability Of Nematic Liquid Crystals** (ISBN: 978-333032092, June 2017)
+
+## Professional Memberships
+
+- Life Member, Society for Atomistic and Continuum Modeling (SACM)
+- Life Member, Systems Society of India (SSI)
+- Life Member, Materials Research Society of India (MRSI)
+- Life Member, The Indian Society for Technical Education (ISTE)
+- Member, International Association of Engineers (IAENG)
+- Life Member, Indian Physics Association (IPA)
+- Life Member, Indian Science Congress Association (ISCA)
