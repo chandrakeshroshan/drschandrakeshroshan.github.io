@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Dr. S. Chandrakesh Roshan
+title: Dr. S Chand Rakesh Roshan
 
 # Full name (for SEO)
-first_name: S. Chandrakesh
+first_name: S Chand Rakesh
 last_name: Roshan
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Associate Professor in Physics
+role: Assistant Professor in Physics
 
 # Organizations/Affiliations to display in Biography blox
 organizations:
@@ -20,49 +20,47 @@ organizations:
 # Social network links
 profiles:
   - icon: at-symbol
-    url: 'mailto:chandrakesh@rgukt.ac.in'
+    url: 'mailto:roshanscrd@gmail.com'
     label: E-mail Me
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/chandrakeshroshan/
   - icon: brands/orcid
-    url: https://orcid.org/0000-0001-6524-4216
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=YOUR_ID
+    url: https://orcid.org/0000-0002-6822-7818
 
 # Interests to show in About widget
 interests:
-  - Glass Science and Technology
-  - Nanomaterials Synthesis and Characterization
-  - Optical Materials
-  - Luminescence Spectroscopy
-  - Renewable Energy Materials
+  - Computational Physics
+  - Lattice Thermal Conductivity
+  - Materials Science
+  - DFT Calculations
+  - Educational Technology
 
 # Education to show in About widget
 education:
   - area: Ph.D. in Physics
-    institution: Pondicherry University
-    location: Puducherry, India
+    institution: National Institute of Technology Warangal
+    location: Warangal, India
     date_start: ''
-    date_end: '2015-01-01'
-    summary: 'Thesis: "Studies on Structural and Electrical Properties of Vanadate, Molybdate and Tungstate Glasses and Glass Nanocomposites". Supervisor: Prof. D. Krishna Rao'
-  - area: M.Tech in Nanotechnology
-    institution: VIT University
-    location: Vellore, India
-    date_start: ''
-    date_end: '2009-01-01'
-    summary: 'Project: "Synthesis of Nano Zinc Oxide for Varistor Application"'
-  - area: M.Sc in Physics
-    institution: Andhra University
-    location: Visakhapatnam, India
-    date_start: ''
-    date_end: '2007-01-01'
-    summary: 'Project: "Study of Mixed Alkali Effect in Li2O-Na2O-B2O3 Glass System"'
-  - area: B.Sc (MPC)
-    institution: Andhra University
-    location: Visakhapatnam, India
-    date_start: ''
-    date_end: '2005-01-01'
+    date_end: '2024-02-01'
     summary: ''
+  - area: M.Tech in Computational Techniques
+    institution: University of Hyderabad
+    location: Hyderabad, India
+    date_start: ''
+    date_end: '2010-08-01'
+    summary: 'GPA: 8.88/10.0'
+  - area: M.Sc in Physics
+    institution: Sri Satya Sai Institute of Higher Learning
+    location: Prasanthi Nilayam, India
+    date_start: ''
+    date_end: '2008-07-01'
+    summary: 'GPA: 4.80/5.0'
+  - area: B.Sc (Hons.) in Physics
+    institution: Sri Satya Sai Institute of Higher Learning
+    location: Prasanthi Nilayam, India
+    date_start: ''
+    date_end: '2006-07-01'
+    summary: 'GPA: 4.57/5.0'
 
 # Skills
 skills:
