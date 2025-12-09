@@ -1,221 +1,145 @@
-// Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
-
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
-});
-
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const offsetTop = target.offsetTop - 70;
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+            const headerOffset = 70;
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
             window.scrollTo({
-                top: offsetTop,
+                top: offsetPosition,
                 behavior: 'smooth'
             });
+            
+            // Close mobile menu if open
+            const navMenu = document.querySelector('.nav-menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
         }
     });
 });
 
-// Active navigation link on scroll
-function updateActiveNavLink() {
-    const sections = document.querySelectorAll('.section, .hero');
-    const scrollPosition = window.scrollY + 100;
+// Mobile menu toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
+
+// Active navigation link on scroll
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+
+function setActiveLink() {
+    let current = '';
+    
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.offsetHeight;
-        const sectionId = section.getAttribute('id');
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
 
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
         }
     });
 }
 
-window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('scroll', setActiveLink);
 
-// Navbar background on scroll
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
+// Header shadow on scroll
+const header = document.querySelector('#header');
+
+function handleScroll() {
     if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+        header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
     } else {
-        navbar.style.backgroundColor = 'var(--bg-white)';
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+        header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
     }
-});
+}
 
-// Animate skill bars on scroll
+window.addEventListener('scroll', handleScroll);
+
+// Intersection Observer for fade-in animations
 const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
-const skillObserver = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                // Trigger animation by temporarily setting width to 0, then restoring
-                const targetWidth = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = targetWidth;
-                }, 10);
-            });
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-const skillsSection = document.getElementById('skills');
-if (skillsSection) {
-    skillObserver.observe(skillsSection);
-}
-
-// Fade-in animation for sections
-const fadeObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, {
-    threshold: 0.1
+// Observe elements for animation
+document.querySelectorAll('.research-area, .publication-item, .teaching-position, .teaching-roles, .certifications, .education, .contact-item, .social-links, .memberships').forEach(el => {
+    observer.observe(el);
 });
 
-// Apply fade-in animation to elements
-document.querySelectorAll('.timeline-item, .research-card, .achievement-card, .skill-category').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    fadeObserver.observe(el);
-});
-
-// Contact form handling
-const contactForm = document.getElementById('contact-form');
-const formStatus = document.getElementById('form-status');
-
-if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        // Get form data
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value
-        };
-
-        // Simulate form submission (in production, you would send this to a backend)
-        try {
-            // Display success message
-            formStatus.textContent = 'Thank you for your message! I will get back to you soon.';
-            formStatus.className = 'success';
-            
-            // Reset form
-            contactForm.reset();
-
-            // Hide message after 5 seconds
-            setTimeout(() => {
-                formStatus.style.display = 'none';
-            }, 5000);
-
-            // In a real implementation, you would send the data to a server:
-            // const response = await fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(formData)
-            // });
-
-        } catch (error) {
-            formStatus.textContent = 'There was an error sending your message. Please try again or contact me directly via email.';
-            formStatus.className = 'error';
-            
-            setTimeout(() => {
-                formStatus.style.display = 'none';
-            }, 5000);
-        }
-    });
-}
-
-// Add hover effect to cards
-document.querySelectorAll('.research-card, .achievement-card, .publication-item, .contact-item').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transition = 'all 0.3s ease';
-    });
-});
-
-// Initialize on page load
-document.addEventListener('DOMContentLoaded', () => {
-    updateActiveNavLink();
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const navMenu = document.querySelector('.nav-menu');
+    const hamburger = document.querySelector('.hamburger');
     
-    // Add smooth reveal to hero section
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        setTimeout(() => {
-            hero.style.opacity = '1';
-        }, 100);
-    }
-});
-
-// Prevent default form submission for mailto fallback
-document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        // Let mailto links work normally
-    });
-});
-
-// Handle external links
-document.querySelectorAll('a[target="_blank"]').forEach(link => {
-    link.setAttribute('rel', 'noopener noreferrer');
-});
-
-// Add loading state to buttons
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function(e) {
-        if (this.type === 'submit') {
-            this.style.opacity = '0.7';
-            this.textContent = 'Sending...';
+    if (navMenu && hamburger) {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
         }
-    });
-});
-
-// Keyboard navigation accessibility
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navMenu.classList.contains('active')) {
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
     }
 });
 
-// Add year to footer automatically
-const currentYear = new Date().getFullYear();
-const footerText = document.querySelector('.footer-content p');
-if (footerText && currentYear > 2024) {
-    footerText.textContent = `© ${currentYear} Chandrakesh Roshan. All rights reserved.`;
+// Prevent body scroll when mobile menu is open
+const body = document.body;
+const navMenuElement = document.querySelector('.nav-menu');
+
+if (navMenuElement) {
+    const menuObserver = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === 'class') {
+                if (navMenuElement.classList.contains('active')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            }
+        });
+    });
+    
+    menuObserver.observe(navMenuElement, { attributes: true });
 }
+
+// Set initial active link on page load
+window.addEventListener('load', setActiveLink);
+
+// Smooth reveal on page load
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+        document.body.style.transition = 'opacity 0.5s ease-in';
+        document.body.style.opacity = '1';
+    }, 100);
+});
+
+console.log('Website loaded successfully! 🎉');
