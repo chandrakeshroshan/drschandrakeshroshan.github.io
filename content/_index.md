@@ -41,11 +41,11 @@ sections:
       title: '📚 My Research'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        My research focuses on **Computational Materials Science**, particularly lattice thermal conductivity, DFT calculations, and materials modeling. I investigate thermal transport in layered materials, high-pressure physics, and structural phase transitions.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        I have published over 10 research papers in prestigious journals including ACS Applied Materials & Interfaces, Inorganic Chemistry, and ACS Applied Energy Materials. My work on highly anisotropic materials and ultralow thermal conductivity has gained significant recognition in the materials science community.
 
-        Please reach out to collaborate 😃
+        I'm also passionate about **Educational Technology** and have served as SWAYAM-NPTEL Coordinator and HEAD of University Training and Placements. Please reach out to collaborate! 😃
     design:
       columns: '1'
   - block: collection
