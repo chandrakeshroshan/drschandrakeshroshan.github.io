@@ -95,7 +95,7 @@ Replace `images/profile.png` with your own photo (recommended: square image, at 
 
 ### Update CV
 
-Replace `Roshan_CV_Aug_NOV-2025.pdf` with your updated CV.
+Replace `Roshan_CV_Aug_NOV-2025.pdf` with your updated CV. Note: If you change the filename, you'll also need to update the link in `index.html` (search for the filename in the CV section).
 
 ## 🔧 Local Development
 

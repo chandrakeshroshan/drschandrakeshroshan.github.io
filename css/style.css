@@ -21,6 +21,7 @@
     --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
     --transition: all 0.3s ease;
+    --navbar-height: 70px;
 }
 
 html {
@@ -83,7 +84,7 @@ a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: var(--navbar-height);
 }
 
 .nav-brand {
@@ -582,7 +583,7 @@ a:hover {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 70px;
+        top: var(--navbar-height);
         flex-direction: column;
         background-color: var(--bg-color);
         width: 100%;

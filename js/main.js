@@ -117,9 +117,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const footer = document.querySelector('.footer p');
-    if (footer) {
+    if (footer && footer.innerHTML.includes('©')) {
         const currentYear = new Date().getFullYear();
-        footer.innerHTML = footer.innerHTML.replace('2025', currentYear);
+        footer.innerHTML = footer.innerHTML.replace(/© \d{4}/, `© ${currentYear}`);
     }
 });
 
