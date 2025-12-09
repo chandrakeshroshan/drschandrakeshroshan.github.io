@@ -77,7 +77,12 @@ const skillObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const skillBars = entry.target.querySelectorAll('.skill-progress');
             skillBars.forEach(bar => {
-                bar.style.width = bar.style.width;
+                // Trigger animation by temporarily setting width to 0, then restoring
+                const targetWidth = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = targetWidth;
+                }, 10);
             });
         }
     });
