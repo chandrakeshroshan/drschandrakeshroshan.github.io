@@ -359,7 +359,11 @@ For questions or issues with this website, please contact:
 - Email: roshanscrd@gmail.com
 - Open an issue on GitHub: [Issues Page](https://github.com/chandrakeshroshan/drschandrakeshroshan.github.io/issues)
 
----
+- **Name**: Chandrakesh Roshan
+- **Position**: PhD Researcher, Department of Physics, IIT Madras
+- **Email**: chandrakesh.roshan@gmail.com / py22resch11002@iitm.ac.in
+- **LinkedIn**: [linkedin.com/in/chandrakesh-roshan](https://linkedin.com/in/chandrakesh-roshan)
+- **Phone**: +91-9931572698
 
 © 2025 Dr. S Chand Rakesh Roshan. All rights reserved.
 
@@ -419,7 +423,7 @@ Copyright © 2025 Dr. S Chand Rakesh Roshan. All rights reserved.
 
 This website's code is available under the MIT License. See [LICENSE.md](LICENSE.md) for details.
 
----
+© 2024 Chandrakesh Roshan. All rights reserved.
 
 **Note:** This website was built from scratch to showcase academic research and professional achievements in a clean, modern, and accessible format.
 
